@@ -1,14 +1,15 @@
-Requirements:
-- Use the Scanner Class for the Input. (https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Scanner.html)
-- Make a own claculator class
-- Seperate logic between the Main methode and the calculator class
-- Think about useful PRINT(LN) texts
-- The input can look like "30 + 10 * 5 / (2 - 1)"  <-- make sure it will be calculated correctly
-- Use a REGEX to validate the Input 
-- Use this Libary for the Regex (https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/regex/Pattern.html)
-- DO NOT use any other libraries!
-- Make sure the input works with and without any withespaces
-- Think about edge cases (at which point does a calculation fail?)
-- When you start it, it only should end when you write "exit"
-- Make an Custom ExceptionHandler and make usefull exceptions for cases like wrong input because of a letter.
-- Think about useful data structures.
+Requirements
+
+- Use the `Scanner` class for input.
+- Provide a `Calculator` class with the calculation logic separated from `Main`.
+- The input may look like: `30 + 10 * 5 / (2 - 1)` and should be calculated correctly using operator precedence and parentheses.
+- Validate input with a regular expression using `java.util.regex.Pattern`.
+- Do not use external libraries.
+- Accept input with or without whitespace.
+- Handle edge cases and provide useful custom exceptions for invalid input.
+- The program should run until the user types `exit`.
+
+Description
+
+A simple calculator that can perform basic math operations and parse expressions with parentheses and operator precedence.
+
