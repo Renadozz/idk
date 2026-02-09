@@ -108,10 +108,30 @@ public class Calculator {
                         else if ("+-×÷".contains(buttonValue)){
                             if (operator == null) {
                                 A = displayLabel.getText();
-                                displayLabel.setText("0");
-                                B = "0";
-                        }
-                        operator = buttonValue;
+                            } else {
+                                B = displayLabel.getText();
+                                double numA = Double.parseDouble(A);
+                                double numB = Double.parseDouble(B);
+                                double result = 0;
+                                
+                                if (operator.equals("+")){
+                                    result = numA + numB;
+                                }
+                                else if (operator.equals("-")){
+                                    result = numA - numB;
+                                }
+                                else if (operator.equals("×")){
+                                    result = numA * numB;
+                                }
+                                else if (operator.equals("÷")){
+                                    if (numB != 0){
+                                        result = numA / numB;
+                                    }
+                                }
+                                A = removeZeroDecimal(result);
+                            }
+                            displayLabel.setText("0");
+                            operator = buttonValue;
                     }
                 }
                     else if (Arrays.asList(topSymbols).contains(buttonValue)) {
