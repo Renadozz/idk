@@ -152,7 +152,12 @@ public class Calculator {
                             displayLabel.setText(removeZeroDecimal(numDisplay));
 
                         }
-                    } 
+                    }
+                    else if (buttonValue.equals("√")) {
+                        double numDisplay = Double.parseDouble(displayLabel.getText());
+                        numDisplay = Math.sqrt(numDisplay);
+                        displayLabel.setText(removeZeroDecimal(numDisplay));
+                    }
                     else {
                         if (buttonValue.equals(".")) {
                             if (!displayLabel.getText().contains(buttonValue)) {
